@@ -7,9 +7,18 @@ pipline{
         maven 'Maven3'
     }
      stages{
-        stage("A")
-        {
-            echo "=============Excecutive A================="
+       stage("Cleanup Workspace"){
+            steps {
+                cleanWs()
+            }
+        }
+     }
+
+    stages{
+       stage("Checkout from SCM"){
+            steps {
+                 git branch: 'main', credentialsId: 'github', url: 'https://github.com/fabiog76/complete-prodcution-e2e-pipeline'
+            }
         }
      }
 }
