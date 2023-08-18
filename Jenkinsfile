@@ -17,7 +17,7 @@ pipline{
     stages{
        stage("Checkout from SCM"){
             steps {
-                 git branch: 'main', credentialsId: 'github', url: 'https://github.com/fabiog76/complete-prodcution-e2e-pipeline'
+                 git branch: 'master', credentialsId: 'github', url: 'https://github.com/fabiog76/complete-prodcution-e2e-pipeline'
             }
         }
      }
